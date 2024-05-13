@@ -1,0 +1,53 @@
+.title {
+    margin-top: 50px;
+    margin-left: 40px;
+    font-size: 24px;
+  }
+  
+  .card {
+    width: 20%; /* Ajusta el ancho según tus necesidades */
+    height: 400px; /* Ajusta la altura según tus necesidades */
+    margin: 0 auto; /* Centra la tarjeta horizontalmente */
+    overflow: hidden;
+  }
+  
+  .images-container {
+    position: relative;
+  }
+  
+
+  
+  .card:hover .hidden-images {
+    left: 0;
+  }
+  
+  .images-container img {
+    width: 100%;
+    height: 100%; /* Hace que las imágenes llenen completamente el contenedor */
+    object-fit: cover; /* Para ajustar las imágenes dentro de su contenedor */
+  }
+  
+
+  .hidden-images {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Cambiado de 'right' a 'left' */
+    display: flex;
+    transition: right 0.3s ease; /* Cambiado de 'right' a 'left' */
+  }
+  
+  .card:hover .hidden-images {
+    left: 0;
+  }
+  
+  .hidden-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Ocultar todas las imágenes excepto la primera */
+  .hidden-images img:nth-child(n + 2) {
+    display: none;
+  }
+  
